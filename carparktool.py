@@ -1,7 +1,4 @@
-import requests
-from time import sleep
-
-BASE_URL: str = "https://popstool.io/awmed49/api"
+stool.io/awmed49/api"
 
 class CarParkTool:
     def __init__(self, access_key) -> None:
@@ -12,7 +9,7 @@ class CarParkTool:
         payload = { "account_email": email, "account_password": password }
         params = { "key": self.access_key }
         response = requests.post(f"{BASE_URL}/account_login", params=params, data=payload)
-        response_decoded = response.json()
+        respoecoded = response.json()
         if response_decoded.get("ok"):
             self.auth_token = response_decoded.get("auth")
         return response_decoded.get("error")
